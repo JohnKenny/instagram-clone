@@ -73,14 +73,14 @@ function Post({ postId, user, username, caption, imageUrl }) {
                     value={comment}
                     onChange={(e) => setComment(e.target.value)}
                 />
-                <button
+                <Button
                 className="post__button"
                 disabled={!comment}
                 type="submit"
                 onClick={postComment}
                 >
                     Post
-                </button>
+                </Button>
                 
 
             </form>)}

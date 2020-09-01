@@ -92,8 +92,7 @@ function App() {
   const signIn = (event) => {
     event.preventDefault();
 
-    auth
-      .signInWithEmailAndPassword(email, password)
+    auth.signInWithEmailAndPassword(email, password)
       .catch((error) => alert(error.message));
 
     setOpenSignIn(false);
@@ -186,7 +185,7 @@ return (
         src="https://www.edigitalagency.com.au/wp-content/uploads/instagram-logo-and-icon-black-and-white-text-glyph-png.png"
         alt=""
         ></img>
-        {user ? (<Button onClick={() => auth.signOut}>Logout</Button>): (
+        {user? (<Button onClick={() => auth.signOut()}>Logout</Button>): (
       <div className="app__loginContainer">
         <Button onClick={() => setOpenSignIn(true)}>Sign In</Button>
         <Button onClick={() => setOpen(true)}>Sign Up</Button>
